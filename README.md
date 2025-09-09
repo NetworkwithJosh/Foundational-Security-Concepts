@@ -1,4 +1,35 @@
-# Foundational-Security-Concepts
-Learn how to use cryptographic hashing to verify file integrity. While file permissions can prevent unauthorized users from modifying a file, they don't protect against accidental changes by an authorized user or more sophisticated attacks.
+# 🔐 File Integrity with Hashing (SHA256)
 
-A hash function creates a unique digital fingerprint (a fixed-length string of characters) for a file. Even a one-bit change in the file will produce a completely different hash, making it an excellent tool for detecting tampering. We will use the sha256sum command, a standard and secure hashing tool in Linux.
+This project demonstrates how **cryptographic hashing** (using SHA256) can be used to verify file integrity and detect tampering.  
+Even a single-bit change in a file produces a completely different hash value, making this technique essential for maintaining data security.
+
+👉 **[Live Interactive Demo](https://networkwithjosh.github.io/Foundational-Security-Concepts/)**  
+
+---
+
+## 📌 Overview
+- Learn how to generate file hashes using `sha256sum` in Linux.  
+- Save trusted hash values for later verification.  
+- Detect unauthorized modifications using checksum comparisons.  
+- Experience an **interactive terminal-style walkthrough** of hashing in action.
+
+---
+
+## 🖼️ Demo Preview
+![Hashing Demo Screenshot](docs/screenshot.png)  
+*(Replace with your own screenshot — you can take one of your GitHub Page once it’s live!)*
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5 + CSS3** → Interactive display and styling  
+- **JavaScript (ES6)** → Toggle explanations + typewriter animation  
+- **GitHub Pages** → Hosting the demo  
+
+---
+
+## 🚀 How to Run Locally
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/NetworkwithJosh/Foundational-Security-Concepts.git
+
