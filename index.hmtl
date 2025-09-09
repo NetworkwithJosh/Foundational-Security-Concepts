@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Integrity with Hashing (SHA256)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔐 File Integrity with Hashing (SHA256)</h1>
+  <p>Welcome, Security Analyst! Let’s investigate whether our <code>confidential_data.txt</code> has been tampered with.</p>
+
+  <!-- Step 1 -->
+  <section class="terminal">
+    <div class="command">$ sha256sum confidential_data.txt</div>
+    <div class="output">106b4d0169831f239fec7a53b072640a2c0b815e00b088bbe44e6689e92cb96d  confidential_data.txt</div>
+    <button onclick="toggleExplain('exp1')">🔎 Explain Code</button>
+    <div id="exp1" class="explain">Generates a SHA256 hash — a unique fingerprint of the file.</div>
+  </section>
+
+  <!-- Step 2 -->
+  <section class="terminal">
+    <div class="command">$ echo "This is an unauthorized modification." >> confidential_data.txt</div>
+    <div class="output">[File has been modified]</div>
+    <button onclick="toggleExplain('exp2')">🔎 Explain Code</button>
+    <div id="exp2" class="explain">We added a line to simulate tampering.</div>
+  </section>
+
+  <!-- Step 3 -->
+  <section class="terminal">
+    <div class="command">$ sha256sum -c hashes.sha256</div>
+    <div class="output fail">confidential_data.txt: FAILED<br>sha256sum: WARNING: 1 computed checksum did NOT match</div>
+    <button onclick="toggleExplain('exp3')">🔎 Explain Code</button>
+    <div id="exp3" class="explain">The hash mismatch proves the file’s integrity was compromised.</div>
+  </section>
+
+  <p class="wrapup">✅ With hashing, you can quickly detect unauthorized modifications.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 
